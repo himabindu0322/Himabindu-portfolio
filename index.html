@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Karri Himabindu | Software Developer Portfolio</title>
+<meta name="description" content="Portfolio of Karri Himabindu, a B.Tech CSE student and full stack developer working with Java, Python and MySQL.">
+<meta property="og:title" content="Karri Himabindu | Software Developer Portfolio">
+<meta property="og:description" content="Full stack projects, internships and skills of a B.Tech CSE student at Aditya University.">
+<meta property="og:image" content="profile.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23c4195a'/><text x='50' y='68' font-size='54' text-anchor='middle' fill='white' font-family='Georgia'>KH</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f6f5;--surface:#fff;--ink:#17262b;--muted:#51636a;--line:#d6dedc;--accent:#c4195a;--accent-ink:#fff;--soft:#fbe6ee;--teal:#0e6b66}
+@media (prefers-color-scheme:dark){:root{--bg:#10181b;--surface:#172226;--ink:#e8efee;--muted:#9bb0b4;--line:#2b3b40;--accent:#ff6b9d;--accent-ink:#10181b;--soft:#2a1a22;--teal:#5fd1c8}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 "Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","Source Sans 3",system-ui,sans-serif;line-height:1.15;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+nav .logo{font:700 19px "Bricolage Grotesque",sans-serif;text-decoration:none}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;overflow-x:auto}
+nav ul a{text-decoration:none;color:var(--muted);font-size:15px;font-weight:600;white-space:nowrap}
+nav ul a:hover{color:var(--accent)}
+.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center;padding:72px 0 64px}
+.hero h1{font-size:clamp(2.6rem,6.5vw,4.6rem);font-weight:700;letter-spacing:-.02em}
+.role{font:500 clamp(1.15rem,2.4vw,1.5rem) "Bricolage Grotesque",sans-serif;color:var(--teal);margin:14px 0 18px}
+.hero p.lead{max-width:34em;color:var(--muted);font-size:1.1rem;margin:0 0 28px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:11px 22px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--accent);transition:transform .15s}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{color:var(--accent)}
+.btn:hover{transform:translateY(-2px)}
+.photo{justify-self:center;width:min(100%,340px);aspect-ratio:4/5;border-radius:999px 999px 24px 24px;overflow:hidden;background:var(--soft);border:6px solid var(--surface);box-shadow:0 0 0 2px var(--accent)}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
+.facts{display:flex;flex-wrap:wrap;gap:10px 28px;margin:0;padding:22px 0;border-block:1px solid var(--line);list-style:none;color:var(--muted);font-size:15px}
+.facts b{color:var(--ink)}
+section{padding:72px 0}
+section h2{font-size:clamp(1.8rem,3.6vw,2.4rem);margin-bottom:10px}
+.sub{color:var(--muted);margin:0 0 36px;max-width:40em}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.about p{margin:0 0 14px}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px}
+.box h3{font-size:1.1rem;margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.chips li{background:var(--soft);color:var(--ink);padding:3px 12px;border-radius:999px;font-size:14px;font-weight:600}
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:24px}
+.project{display:flex;flex-direction:column;gap:14px;border-top:5px solid var(--accent)}
+.project h3{font-size:1.35rem}
+.project ul,.tl ul,.ach{margin:0;padding-left:20px}
+.project li,.tl li,.ach li{margin-bottom:6px}
+.project .link{margin-top:auto;font-weight:600;color:var(--accent)}
+.tl{list-style:none;margin:0;padding:0 0 0 26px;border-left:3px solid var(--line)}
+.tl>li{position:relative;padding-bottom:36px}
+.tl>li::before{content:"";position:absolute;left:-36px;top:7px;width:15px;height:15px;border-radius:50%;background:var(--accent);border:3px solid var(--bg)}
+.tl h3{font-size:1.25rem}
+.tl .org{color:var(--teal);font-weight:600;margin:2px 0 10px}
+.edu{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.edu .score{font:700 2rem "Bricolage Grotesque",sans-serif;color:var(--accent)}
+.edu p{margin:4px 0;color:var(--muted)}
+.certs{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:8px 0 4px}
+.certs span{font-size:14px;font-weight:600;color:var(--muted)}
+.certs a{display:inline-block;padding:3px 14px;border:2px solid var(--accent);border-radius:999px;font-size:14px;font-weight:600;color:var(--accent);text-decoration:none}
+.certs a:hover{background:var(--accent);color:var(--accent-ink)}
+.profiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px}
+.profile-card{display:flex;flex-direction:column;gap:6px;text-decoration:none;transition:transform .15s,border-color .15s}
+.profile-card:hover{transform:translateY(-3px);border-color:var(--accent)}
+.profile-card h3{font-size:1.2rem;margin-bottom:0}
+.profile-card p{margin:0;color:var(--muted);font-size:15px}
+.profile-card .go{margin-top:auto;padding-top:10px;font-weight:600;color:var(--accent)}
+.contact{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:44px;text-align:center}
+.contact p{max-width:32em;margin:8px auto 26px;color:var(--muted)}
+.contact .btns{justify-content:center}
+footer{padding:28px 0 40px;text-align:center;color:var(--muted);font-size:14px}
+@media (max-width:820px){.hero{grid-template-columns:1fr;padding-top:40px}.photo{order:-1;width:min(70%,260px);justify-self:start}.about{grid-template-columns:1fr}.projects{grid-template-columns:1fr}.contact{padding:30px 20px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.profile-card{transition:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav aria-label="Main">
+<a class="logo" href="#top">Himabindu</a>
+<ul><li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li><li><a href="#experience">Experience</a></li><li><a href="#education">Education</a></li><li><a href="#coding">Coding</a></li><li><a href="#contact">Contact</a></li></ul>
+</nav></div></header>
+
+<main id="top">
+<div class="wrap">
+<div class="hero">
+<div>
+<h1>Karri Himabindu</h1>
+<p class="role">Aspiring Software Developer and CSE student</p>
+<p class="lead">I build web applications with Java and Python, and I like turning manual workflows into clean, working software. I am studying B.Tech in Computer Science at Aditya University and looking for internship and entry-level software roles.</p>
+<div class="btns">
+<a class="btn primary" href="#projects">View projects</a>
+<a class="btn ghost" href="mailto:karrihimabindu22@gmail.com">Email me</a>
+<a class="btn ghost" href="https://github.com/himabindu0322" target="_blank" rel="noopener">GitHub</a>
+<a class="btn ghost" href="https://www.linkedin.com/in/karri-himabindu-152590348/" target="_blank" rel="noopener">LinkedIn</a>
+<a class="btn ghost" href="#coding">Coding profiles</a>
+</div>
+</div>
+<div class="photo"><img src="profile.jpg" alt="Portrait of Karri Himabindu" width="405" height="510"></div>
+</div>
+<ul class="facts">
+<li><b>B.Tech CSE</b> at Aditya University, 2024 to 2028</li>
+<li><b>CGPA 8.25</b></li>
+<li><b>10+</b> projects on GitHub</li>
+<li>Location - Anaparthi, Andhra Pradesh, India</li>
+</ul>
+</div>
+
+<section id="about"><div class="wrap">
+<h2>About me</h2>
+<div class="about">
+<div>
+<p>Hi, I'm Karri Himabindu, a 3rd Year CSE student.</p>
+<p>I am currently learning Data Structures and Algorithms, Web Development, Python, AI and Machine Learning, and Competitive Programming. I enjoy building innovative projects, solving coding challenges and exploring new technologies.</p>
+<p>I am interested in Full-Stack Development, AI/ML, Open Source and Software Engineering.</p>
+</div>
+<div>
+<p>I keep improving my coding skills by building projects, taking part in hackathons, doing internships and solving coding challenges, and I am growing as a developer with each one.</p>
+<div class="box">
+<h3>My goal</h3>
+<p style="margin:0">To become a skilled Software Engineer and contribute to impactful technology solutions that solve real-world problems.</p>
+</div>
+</div>
+</div>
+</div></section>
+
+<section id="skills" style="padding-top:0"><div class="wrap">
+<h2>Technical skills</h2>
+<p class="sub">The tools I use for projects and coursework.</p>
+<div class="skills">
+<div class="box"><h3>Languages</h3><ul class="chips"><li>Java</li><li>C</li><li>C++</li><li>JavaScript</li><li>Python</li></ul></div>
+<div class="box"><h3>Web</h3><ul class="chips"><li>HTML</li><li>CSS</li><li>Bootstrap</li><li>Django</li></ul></div>
+<div class="box"><h3>Databases</h3><ul class="chips"><li>MySQL</li><li>SQLite</li><li>JDBC</li><li>Django ORM</li></ul></div>
+<div class="box"><h3>Computer science</h3><ul class="chips"><li>Data structures and algorithms</li><li>OOP</li><li>DBMS</li><li>Operating systems</li><li>Computer networks</li></ul></div>
+<div class="box"><h3>Tools</h3><ul class="chips"><li>Git and GitHub</li><li>VS Code</li><li>Google Colab</li></ul></div>
+<div class="box"><h3>Office</h3><ul class="chips"><li>PowerPoint</li><li>Word</li><li>Excel</li></ul></div>
+</div>
+</div></section>
+
+<section id="projects" style="padding-top:0"><div class="wrap">
+<h2>Projects</h2>
+<p class="sub">Two projects that show how I work across the full stack. More are on my GitHub.</p>
+<div class="projects">
+<article class="box project">
+<h3>Vehicle Service Management System</h3>
+<ul class="chips"><li>Python</li><li>Django</li><li>SQLite</li><li>HTML</li><li>CSS</li><li>Bootstrap</li></ul>
+<ul>
+<li>Full stack app that automates the daily operations of an automobile service center.</li>
+<li>Role-based authentication, customer and vehicle management, appointment scheduling, technician assignment, inventory and billing modules.</li>
+<li>Responsive interface built with Bootstrap, with database operations handled through the Django ORM.</li>
+<li>Automated service tracking and invoice generation to cut manual record keeping.</li>
+</ul>
+<a class="link" href="https://github.com/himabindu0322/Vehicle_Service_Management" target="_blank" rel="noopener">See my repositories on GitHub</a>
+</article>
+<article class="box project">
+<h3>Library Management System</h3>
+<ul class="chips"><li>Java</li><li>JDBC</li><li>MySQL</li></ul>
+<ul>
+<li>Desktop application that automates library operations.</li>
+<li>CRUD features for books and user records, backed by MySQL.</li>
+<li>Book issue and return tracking that keeps every transaction accurate.</li>
+<li>Built with object-oriented design and JDBC for clean communication between the app and the database.</li>
+</ul>
+<a class="link" href="https://github.com/himabindu0322/Library-Management-System-Java" target="_blank" rel="noopener">See my repositories on GitHub</a>
+</article>
+</div>
+</div></section>
+
+<section id="experience" style="padding-top:0"><div class="wrap">
+<h2>Experience</h2>
+<p class="sub">Internships and community roles, newest first.</p>
+<ol class="tl">
+<li><h3>Campus Mantri</h3><p class="org">GeeksforGeeks</p>
+<ul><li>Official GeeksforGeeks representative at my university, promoting a coding culture.</li><li>Organise workshops, coding contests, webinars and technical events for students.</li><li>Support peers in upskilling and grow the local learning community.</li></ul></li>
+<li><h3>Full Stack Development Intern</h3><p class="org">Anurag IT Solutions</p>
+<ul><li>Built a vehicle service management system covering customer registration, service booking, service tracking, inventory and an admin dashboard.</li><li>Worked across frontend, backend and database, and practised debugging and industry-standard development habits.</li></ul></li>
+<li><h3>Virtual Internships</h3><p class="org">Future Intern, UpSkill Campus, Cognizant, SaiKet Technologies, Venura</p>
+<ul><li>Completed internships in software development, Python, web development and machine learning.</li><li>Built real-world projects with Python, Java, HTML, CSS, JavaScript, SQL and Git, and documented them on GitHub.</li></ul></li>
+</ol>
+</div></section>
+
+<section id="education" style="padding-top:0"><div class="wrap">
+<h2>Education</h2>
+<p class="sub">&nbsp;</p>
+<div class="edu">
+<div class="box"><div class="score">8.25 CGPA</div><h3>B.Tech, Computer Science and Engineering</h3><p>Aditya University, Surampalem</p><p>2024 to 2028 (pursuing)</p></div>
+<div class="box"><div class="score">85%</div><h3>Intermediate</h3><p>GBR Junior College, Anaparthi (BIEAP)</p><p>2022 to 2024</p></div>
+<div class="box"><div class="score">94%</div><h3>SSC (Class 10)</h3><p>Bhashyam English Medium School, Rayavaram</p><p>2022</p></div>
+</div>
+</div></section>
+
+<section id="achievements" style="padding-top:0"><div class="wrap">
+<h2>Achievements and activities</h2>
+<p class="sub">&nbsp;</p>
+<div class="about">
+<ul class="ach">
+<li>Published 10+ software development and machine learning projects on GitHub.</li>
+<li>Earned certifications in AI, machine learning, Python, Java, web development and generative AI.
+<div class="certs"><span>Certificate:</span><a href="https://media.geeksforgeeks.org/courses/certificates/765f38e4784f1e7d2b9834e56e36fdba.pdf" target="_blank" rel="noopener">GeeksforGeeks course certificate</a></div></li>
+<li>Solved coding problems and earned skill certifications on HackerRank and GeeksforGeeks.</li>
+</ul>
+<ul class="ach">
+<li>Participated in the Women Who Master Hackathon, an all women national initiative by Logitech and Aspire For Her.
+<div class="certs"><span>Certificate:</span><a href="https://unstop.com/certificate-preview/6e50eb6d-fd50-4e9a-8b17-15db8025abae" target="_blank" rel="noopener">Women Who Master Hackathon (Unstop)</a></div></li>
+<li>Took part in the TCS CodeVita national level coding competition.</li>
+<li>Played in online chess & coding competitions hosted by Unstop and Ascent Circle.
+<div class="certs"><span>Certificates:</span><a href="https://unstop.com/certificate-preview/e12f8daf-a81d-453c-a78e-7da292f116a5" target="_blank" rel="noopener">Chess certificate (Unstop)</a><a href="https://app.truscholar.io/profile?credId=6a4deb70e7e1eb0295b6e7b6" target="_blank" rel="noopener">Coding certificate (TruScholar)</a></div></li>
+</ul>
+</div>
+</div></section>
+
+<section id="coding" style="padding-top:0"><div class="wrap">
+<h2>Coding profiles and certifications</h2>
+<p class="sub">Where I practise problem solving and keep my certifications.</p>
+<div class="profiles">
+<a class="box profile-card" href="https://leetcode.com/u/himabindu_karri/" target="_blank" rel="noopener">
+<h3>LeetCode</h3><p>Data structures and algorithms practice.</p><span class="go">View profile</span></a>
+<a class="box profile-card" href="https://www.geeksforgeeks.org/profile/karrihima0h8b" target="_blank" rel="noopener">
+<h3>GeeksforGeeks</h3><p>Coding problems and practice articles.</p><span class="go">View profile</span></a>
+<a class="box profile-card" href="https://www.codechef.com/users/hima_bindu_03" target="_blank" rel="noopener">
+<h3>CodeChef</h3><p>Competitive programming contests.</p><span class="go">View profile</span></a>
+<a class="box profile-card" href="https://www.naukri.com/code360/profile/6dfae3e8-8ad7-4c9d-804c-cf05c70951f3" target="_blank" rel="noopener">
+<h3>Code360</h3><p>Coding Ninjas practice and courses.</p><span class="go">View profile</span></a>
+<a class="box profile-card" href="https://www.credly.com/users/himabindu-karri" target="_blank" rel="noopener">
+<h3>Credly</h3><p>Verified digital badges and certifications.</p><span class="go">View badges</span></a>
+<a class="box profile-card" href="https://www.hackerrank.com/profile/karrihimabindu22" target="_blank" rel="noopener">
+<h4>Hacker Rank</h3><p>Coding Practise.</p><span class="go">View Stars Earned</span></a>
+</div>
+</div></section>
+
+<section id="contact" style="padding-top:0"><div class="wrap">
+<div class="contact">
+<h2>Let's work together</h2>
+<p>I am open to internships and entry-level software roles. Send me a message and I will reply.</p>
+<div class="btns">
+<a class="btn primary" href="mailto:karrihimabindu22@gmail.com">karrihimabindu22@gmail.com</a>
+<a class="btn ghost" href="https://www.linkedin.com/in/karri-himabindu-152590348/" target="_blank" rel="noopener">LinkedIn</a>
+<a class="btn ghost" href="https://github.com/himabindu0322" target="_blank" rel="noopener">GitHub</a>
+</div>
+</div>
+</div></section>
+</main>
+<footer><div class="wrap">&copy; <span id="y">2026</span> Karri Himabindu</div></footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>

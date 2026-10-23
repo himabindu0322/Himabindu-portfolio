@@ -62,8 +62,8 @@ himabindu-portfolio/
 ## 📫 Connect With Me
 
 - **GitHub:** [himabindu0322](https://github.com/himabindu0322)
-- **LinkedIn:** Add your LinkedIn profile URL
-- **Email:** Add your professional email address
+- **LinkedIn:** https://www.linkedin.com/in/karri-himabindu-152590348/
+- **Email:** karrihimabindu22@gmail.com
 
 ## 📄 License
 

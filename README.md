@@ -7,6 +7,9 @@ I am **Karri Himabindu**, a B.Tech Computer Science and Engineering student at A
 
 This portfolio showcases my technical skills, projects, internships, education, certifications, achievements, and coding profiles.
 
+🌐 Live Demo
+View My Portfolio
+https://himabindu0322.github.io/Himabindu-portfolio/
 
 ## 🛠️ Technologies Used
 
